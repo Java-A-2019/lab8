@@ -5,10 +5,6 @@
     2. 理解多态性
     3. 以上
 
-## 提交
-DDL: 2019 年 11 月 24 日 23:59
-
-以学号_姓名.文件类型的格式命名，如16302010027_毛浩楠.zip。上传至FTP
 
 ## 使用面向对象方法设计魔塔对象
 
@@ -36,70 +32,70 @@ PJ 1 已经结束了。根据大家的完成情况，助教们发现了几个问
 
 于是我们有了三个类——格子类、玩家类与地图类——用来创建格子对象、玩家对象和地图对象，代码如下：
 - Lattice.java
-```java
-public class Lattice {
-    public Lattice() {
-    }
+    ```java
+    public class Lattice {
+        public Lattice() {
+        }
 
-    public String getAppearance() {
-        return "空";
-    }
-}
-```
-
-- Player.java
-```java
-public class Player {
-    private int[] position;
-    private int[] nextPosition;
-
-    public Player(int[] position) {
-        this.position = position;
-    }
-
-    public boolean move(/* add some parameters */) {
-        // do something
-        return false;
-    }
-
-    public boolean isOnThePosition(int positionX, int positionY) {
-        return position[0] == positionX && position[1] == positionY;
-    }
-
-    public String getAppearance() {
-        return "勇";
-    }
-}
-```
-
-- MotaMap.java
-```java
-public class MotaMap {
-    private Lattice[][] lattices;
-    private Player player;
-
-    public MotaMap(Lattice[][] lattices, Player player) {
-        this.lattices = lattices;
-        this.player = player;
-    }
-
-    public void print() {
-        int row = lattices.length;
-        int column = lattices[0].length;
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < column; j++) {
-                if (player.isOnThePosition(i, j)) {
-                    System.out.print(player.getAppearance());
-                } else {
-                    System.out.print(lattices[i][j].getAppearance());
-                }
-            }
-            // 换行
-            System.out.println();
+        public String getAppearance() {
+            return "空";
         }
     }
-}
-```
+    ```
+
+- Player.java
+    ```java
+    public class Player {
+        private int[] position;
+        private int[] nextPosition;
+
+        public Player(int[] position) {
+            this.position = position;
+        }
+
+        public boolean move(/* add some parameters */) {
+            // do something
+            return false;
+        }
+
+        public boolean isOnThePosition(int positionX, int positionY) {
+            return position[0] == positionX && position[1] == positionY;
+        }
+
+        public String getAppearance() {
+            return "勇";
+        }
+    }
+    ```
+
+- MotaMap.java
+    ```java
+    public class MotaMap {
+        private Lattice[][] lattices;
+        private Player player;
+
+        public MotaMap(Lattice[][] lattices, Player player) {
+            this.lattices = lattices;
+            this.player = player;
+        }
+
+        public void print() {
+            int row = lattices.length;
+            int column = lattices[0].length;
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < column; j++) {
+                    if (player.isOnThePosition(i, j)) {
+                        System.out.print(player.getAppearance());
+                    } else {
+                        System.out.print(lattices[i][j].getAppearance());
+                    }
+                }
+                // 换行
+                System.out.println();
+            }
+        }
+    }
+    ```
 
 接下来我们需要具体考虑各种格子的特性了
 - 将史莱姆、骷髅、魔王等怪物归纳为怪物类，继承格子类，怪物类相对于格子类需要有血量，攻击力，防御力等属性，需要有战斗方法，死亡方法等方法
@@ -123,5 +119,10 @@ public class MotaMap {
 
 ## 多态性
 
-大家一定已经发现 Lattice 类的 affectWith, getAppearance 方法就展现了多态性：同样的类的对象调用同样的方法却有不同的反应。这是类的多态性。除此之外，多态性还有另外一种表现，那是什么？是如何表现的？请举例说明，将答案写在 Word 文档中，与代码一起打包提交。
+大家一定已经发现 `Lattice` 类的 `affectWith`, `getAppearance` 方法就展现了多态性：同样的类的对象调用同样的方法却有不同的反应。这是类的多态性。除此之外，多态性还有另外一种表现，那是什么？是如何表现的？请举例说明，将答案写在 Word 文档中，与代码一起打包提交。
 
+
+## 提交
+DDL: 2019 年 11 月 24 日 23:59
+
+以 `学号_姓名.文件` 类型的格式命名，如 `16302010027_毛浩楠.zip` 。上传至FTP
