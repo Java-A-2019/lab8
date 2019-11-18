@@ -53,11 +53,6 @@ PJ 1 已经结束了。根据大家的完成情况，助教们发现了几个问
             this.position = position;
         }
 
-        public boolean move(/* add some parameters */) {
-            // do something
-            return false;
-        }
-
         public boolean isOnThePosition(int positionX, int positionY) {
             return position[0] == positionX && position[1] == positionY;
         }
@@ -121,7 +116,7 @@ PJ 1 已经结束了。根据大家的完成情况，助教们发现了几个问
 
 ## 多态性
 
-大家一定已经发现 `Lattice` 类的 `affectWith`, `getAppearance` 方法就展现了多态性：同样的类的对象调用同样的方法却有不同的反应。这是类的多态性。除此之外，多态性还有另外一种表现，那是什么？是如何表现的？请举例说明，将答案写在 Word 文档中，与代码一起打包提交。
+大家一定已经发现 `Lattice` 类的 `affectWith`, `getAppearance` 方法就展现了多态性：同样的类的对象调用同样的方法却有不同的反应。这是类的多态性的一种表现。除此之外，多态性还有另外一种表现，那是什么？是如何表现的？请举例说明，将答案写在 Word 文档中，与代码一起打包提交。
 
 
 ## 提交
